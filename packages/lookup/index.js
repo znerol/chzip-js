@@ -21,7 +21,7 @@ const pfxmatch = (subject, prefix) => {
 };
 
 export class Lookup {
-    constructor(baseurl, options = {}) {
+    constructor(baseurl = 'https://znerol.github.io/chzip-js/data', options = {}) {
         this.baseurl = baseurl;
         this.cache = {
             id: '',
