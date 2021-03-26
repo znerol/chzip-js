@@ -1,0 +1,21 @@
+{
+  "name": "@chzip/generate",
+  "version": "1.0.0",
+  "description": "Generate dataset of swiss zip codes and localities",
+  "author": "Lorenz Schori <lo@znerol.ch>",
+  "license": "GPL-3.0-or-later",
+  "type": "commonjs",
+  "main": "index.cjs",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "stream-chain": "^2.2.4",
+    "stream-json": "^1.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-plugin-node": "^11.1.0"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@chzip/data",
+  "version": "1.0.0",
+  "description": "Dataset of swiss zip codes and localities",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "clean": "shx rm -rf dist",
+    "build": "vite build && node dist.js",
+    "dist": "yarn run clean && yarn run build"
+  },
+  "dependencies": {
+    "@chzip/generate": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "shx": "^0.3.3",
+    "vite": "^2.1.3"
+  }
+}

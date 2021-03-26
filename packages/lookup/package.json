@@ -1,0 +1,13 @@
+{
+  "name": "@chzip/lookup",
+  "version": "1.0.0",
+  "description": "Lookup records from dataset of swiss zip codes and localities",
+  "author": "Lorenz Schori <lo@znerol.ch>",
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "module": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.23.0"
+  }
+}
