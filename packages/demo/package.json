@@ -5,7 +5,7 @@
   "license": "GPL-3.0-or-later",
   "scripts": {
     "clean": "shx rm -rf dist",
-    "build": "vite build && node dist.js",
+    "build": "vite build --base=./ && node dist.js",
     "dist": "yarn run clean && yarn run build"
   },
   "dependencies": {
