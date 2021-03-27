@@ -4,6 +4,7 @@
   "description": "Dataset of swiss zip codes and localities",
   "license": "GPL-3.0-or-later",
   "scripts": {
+    "dev": "vite serve",
     "clean": "shx rm -rf dist",
     "build": "vite build --base=./ && node dist.js",
     "dist": "yarn run clean && yarn run build"
@@ -14,6 +15,7 @@
   "devDependencies": {
     "eslint": "^7.23.0",
     "shx": "^0.3.3",
+    "source-sans-pro": "^3.6.0",
     "vite": "^2.1.3"
   }
 }
