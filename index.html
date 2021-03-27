@@ -6,28 +6,65 @@
   <title>CH Zip Lookup Demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-<script type="module" crossorigin src="./assets/index.c3dc4d77.js"></script>
+  
+<script type="module" crossorigin src="./assets/index.cee8dae9.js"></script>
+  <link rel="stylesheet" href="./assets/index.e044ac86.css">
 </head>
 
 <body>
-  <div id="root">
+    <h1>Welcome to chzip.js</h1>
+    <p class="slogan">
+        Fast zip code and locality lookups for Switzerland with minimal footprint.
+    </p>
+
+    <h2>Demo</h2>
+
     <form>
-      <label>
-        Zip
-        <input id="zip" type="text">
-      </label>
-      <label>
-        City
-        <input id="city" type="text">
-      </label>
-      <label>
-        Canton
-        <input id="canton" disabled>
-      </label>
+        <label>
+            Zip
+            <input id="zip" type="number">
+        </label>
+        <label>
+            City
+            <input id="city" type="text">
+        </label>
+        <label>
+            Canton
+            <input id="canton" disabled>
+        </label>
+        <button id="reset" type="button">Reset</button>
     </form>
-    <ul id="hits">
-    </ul>
-  </div>
+
+    <div class="hits-container">
+        <ul id="hits" class="hits-overlay">
+        </ul>
+    </div>
+
+    <h2>Datasource</h2>
+
+    <p>
+        Lookup data is sourced from the SwissPost opendata <a href="https://swisspost.opendatasoft.com/explore/dataset/plz_verzeichnis_v2/information/">repository</a> (licenced under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>). The whole data set is slimmed down and sliced up for prefix matching at regular intervals using <code>@chzip/generate</code> package. The result is published automatically on github pages. The <code>@chzip/generate</code> package can be used to prepare datasets for self-hosting as well.
+    </p>
+
+    <p>
+    In order to minimize the amount of data downloaded to the client during a search, the dataset is subdivided into 9 zip code sets (<code>zip-1.json to zip-9.json</code>) and 24 city sets (<code>cty-a.json to cty-z.json</code>).
+    </p>
+
+    <h2>Lookup</h2>
+
+    <p>
+        In order to find relevant entries, a string prefix matching is applied. A hit is returned when every entered keyword matches at least one word in the subject (i.e. the locality name). All words are normalized to lower case and diacritics are removed before a matching is attempted. A very minimal lookup client is implemented in <code>@chzip/lookup</code>.
+    </p>
+
+    <h2>License</h2>
+
+    <p>
+        All source code of chzip.js is free software subject to the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL-3 or later</a>. The zip code dataset is sourced from the SwissPost opendata <a href="https://swisspost.opendatasoft.com/explore/dataset/plz_verzeichnis_v2/information/">repository</a> licenced under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>.
+    </p>
+
+    <nav>
+        <a class="icon-octocat" href="https://github.com/znerol/chzip-js/">Source Code</a>
+    </nav>
 </body>
 
 </html>
