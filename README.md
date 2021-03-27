@@ -7,7 +7,7 @@ footprint.
 Demo
 ----
 
-A demo page for browsers can be found [here](https://github.com/znerol/chzip-js).
+A demo page for browsers can be found [here](https://znerol.github.io/chzip-js/).
 
 
 Datasource
